@@ -1,0 +1,18 @@
+Package: twitterAnalysis
+Title: Assess a twitter user's character based on their recent tweets
+Version: 0.0.0.9000
+Authors@R: 
+    c(person("Andy", "Wang", role = c("aut", "cre"), email = "Andy.Wang@ubc.net"),
+              person("Yurui", "Feng", role = "aut"),
+              person("Roan", "Raina", role = "aut"),
+              person("Renzo", "Wijingaarden", role = "aut"))
+Description: Twitter is a popular social media app with over 1 billion user accounts. 
+             While a diversity of users is a strength, some individuals have concerns with the prevalence of "troll" accounts and individuals who exhibit unconstructive tone and diction whom they deem not worth engaging with. The package twitterpersona is intended to provide insight into a twitter user based on their tweet history in effort to determine if an account is worth engaging with. 
+             The package provides an easy to use interface for determining the general sentiment expressed by a user.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.2.3
+Suggests: 
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3
