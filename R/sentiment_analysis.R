@@ -9,21 +9,27 @@ library(dplyr)
 #' @export
 #'
 #' @examples
-#' x <- sentiment_labeler(df, "text")
+#' df <- data.frame(User = c("Youri"), text = c("Hi, how are you!"))
+#' labelled_df <- sentiment_labeler(df, "text")
 #'
 sentiment_labeler <- function(df, col) {
   df$score <- syuzhet::get_nrc_sentiment(df[, col])
   df <- df |>
-    mutate(sentiment =
-             ifelse(score$positive > score$negative,
-                    "positive",
-             ifelse(score$positive < score$negative,
-                    "negative",
-             ifelse(score$positive == score$negative,
-                    "neutral",
-                    "ERROR"))))
+    dplyr::mutate(
+      sentiment =
+        ifelse(score$positive > score$negative,
+          "positive",
+          ifelse(score$positive < score$negative,
+            "negative",
+            ifelse(score$positive == score$negative,
+              "neutral",
+              "ERROR"
+            )
+          )
+        )
+    )
   df <- df |>
-    select(-score)
+    dplyr::select(-score)
   return(df)
 }
 
@@ -33,11 +39,13 @@ sentiment_labeler <- function(df, col) {
 #' @param df A dataframe after pre-processing
 #' @param proportion A boolean value if True: returns the proportion; otherwise, return the counts
 #'
-#' @return A dictionary which calculates the proportion of three sentiments of tweets
+#' @return A list which calculates the proportion of three sentiments of tweets
 #' @export
 #'
 #' @examples
-#' x <- count_tweets(labelled_df)
+#' df <- data.frame(User = c("Youri"), text = c("Hi, how are you!"))
+#' labelled_df <- sentiment_labeler(df, "text")
+#' count_list <- count_tweets(labelled_df)
 count_tweets <- function(df, proportion = TRUE) {
   if (proportion) {
     sentiment_counts <- prop.table(table(df$sentiment))

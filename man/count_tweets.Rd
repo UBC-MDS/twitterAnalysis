@@ -12,11 +12,13 @@ count_tweets(df, proportion = TRUE)
 \item{proportion}{A boolean value if True: returns the proportion; otherwise, return the counts}
 }
 \value{
-A dictionary which calculates the proportion of three sentiments of tweets
+A list which calculates the proportion of three sentiments of tweets
 }
 \description{
 Count the propotion of different sentiment tweets in a labelled sentiment dataframe
 }
 \examples{
-x <- count_tweets(labelled_df)
+df <- data.frame(User = c("Youri"), text = c("Hi, how are you!"))
+labelled_df <- sentiment_labeler(df, "text")
+count_list <- count_tweets(labelled_df)
 }

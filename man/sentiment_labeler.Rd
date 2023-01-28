@@ -18,6 +18,7 @@ A dataframe contains all tweets the corresponding labels
 Labelling each row in a given column of tweets/text with positive, negative or neutral sentiment
 }
 \examples{
-x <- sentiment_labeler(df, "text")
+df <- data.frame(User = c("Youri"), text = c("Hi, how are you!"))
+labelled_df <- sentiment_labeler(df, "text")
 
 }
