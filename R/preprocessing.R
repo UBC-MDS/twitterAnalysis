@@ -1,12 +1,13 @@
 library(stopwords)
-
 #'  Perform general preprocessing on df. Removes retweets/favourites and cleans URLs, Mentions, and Numbers.
 #'
 #' @param df dataframe storing all the raw data with text column
 #'
 #' @return processed tweet dataframe.
+#' @export
 #'
 #' @examples
+#' df <- data.frame(User = c("James"), text = c("Hi, how are you!"))
 #' x <- generalPreprocessing(df)
 generalPreprocessing <- function(df) {
   # get rid of retweets / favourites (rows)

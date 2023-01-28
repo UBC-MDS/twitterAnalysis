@@ -54,7 +54,7 @@ test_that("shape", {
 
 
 test_that("shape", {
-  expect_true('text_clean' %in% colnames(generalPreprocessing(df)))
+  expect_true('text_clean' %in% colnames(generalPreprocessing(potus_df)))
 })
 
 test_that("potus_df",{

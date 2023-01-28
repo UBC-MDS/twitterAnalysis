@@ -9,7 +9,10 @@
 #' @return list contains above user info
 #' @export
 #'
-#' @examples user_info(consumer_key, consumer_secret, access_token, access_token_secret)
+#' @examples
+#' \dontrun{
+#' user_info(consumer_key_input, consumer_secret_input, access_token_input, access_token_secret_input)
+#' }
 user_info <- function(consumer_key_input, consumer_secret_input, access_token_input, access_token_secret_input) {
 
   user_info <- list(
@@ -32,7 +35,9 @@ user_info <- function(consumer_key_input, consumer_secret_input, access_token_in
 #' @export
 #'
 #' @examples
+#' \dontrun{
 #' x <- load_twitter_by_user('nice', 50, user)
+#' }
 load_twitter_by_keywords <- function(user_name, limit, user_info) {
   consumer_key <- user_info$consumer_key
   consumer_secret <- user_info$consumer_secret
@@ -57,7 +62,9 @@ load_twitter_by_keywords <- function(user_name, limit, user_info) {
 #' @export
 #'
 #' @examples
+#' \dontrun{
 #' x <- load_twitter_by_keywords('2022', 100)
+#' }
 load_twitter_by_user <- function(keyword, limit, user_info) {
   consumer_key <- user_info$consumer_key
   consumer_secret <- user_info$consumer_secret
