@@ -1,24 +1,27 @@
-#' Perform general preprocessing on df
+library(stopwords)
+
+#'  Perform general preprocessing on df. Removes retweets/favourites and cleans URLs, Mentions, and Numbers.
 #'
-#' @param df A dataframe storing all the raw data with text column
-#' @param output_path  The path that the newly generated csv should located at
+#' @param df dataframe storing all the raw data with text column
 #'
-#' @return A dataframe contains preprocessed (fix type, drop unused column, arrange column order, add text column) dataframe and export as a csv file
-#' @export
+#' @return processed tweet dataframe.
 #'
 #' @examples
 #' x <- generalPreprocessing(df)
+generalPreprocessing <- function(df) {
+  # get rid of retweets / favourites (rows)
+  df <- df[!grepl("(RT|FAV)", df$text),]
 
+  # remove Numbers
+  df$text_clean <- gsub("[0-9]+", "", df$text)
 
+  # remove  URL's
+  url_pattern <- "http[s]?://(?:[a-zA-Z]|[0-9]|[$-_@.&+]|[!*\\(\\),]|(?:%[0-9a-fA-F][0-9a-fA-F]))+"
+  df$text_clean <- gsub(url_pattern, "", df$text_clean)
 
+  #remove mentions
+  df$text_clean <- gsub("@\\w*", "", df$text_clean)
 
+  return(df)
+}
 
-#' Clean all punctuations and special mark for each twitter message(s)
-#'
-#' @param tweets Tweets message for each twitter
-#'
-#' @return A String which represents tweets contains non-punctuations and special marks string message
-#' @export
-#'
-#' @examples
-#' x <- clean_punctuation('Today is a good day!')
