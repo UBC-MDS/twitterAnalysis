@@ -7,7 +7,7 @@
 <!-- badges: end -->
 
 The goal of twitterAnalysis is to assess a twitter user’s character
-based on their recent tweets
+based on their recent tweets.
 
 ## Installation
 
