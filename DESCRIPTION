@@ -19,6 +19,7 @@ Config/testthat/edition: 3
 Imports: 
     dplyr,
     stopwords,
-    syuzhet,
     tm,
-    wordcloud
+    wordcloud,
+    twitteR
+
