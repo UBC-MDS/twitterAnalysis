@@ -7,7 +7,7 @@
 <!-- badges: end -->
 
 The goal of twitterAnalysis is to assess a twitter user’s character
-based on their recent tweets.
+based on their recent tweets
 
 ## Installation
 
@@ -45,10 +45,10 @@ words in tweets.
 
 ## Scope and Fit
 
-There are existing packages that preform tweet analysis (including
-[twitter-sentiment-analysis](https://github.com/abdulfatir/twitter-sentiment-analysis),
-[tweetlytics](https://github.com/UBC-MDS/tweetlytics), and
-[pytweet](https://github.com/UBC-MDS/pytweet)). However, none of these
+There are existing R packages that preform tweet analysis and
+preprocessing (including
+[textprepr](https://github.com/UBC-MDS/textprepr) and
+[tweetr](https://github.com/UBC-MDS/tweetr)). However, none of these
 packages focus of providing metrics in the context of determining if the
 twitter user is worth engaging with.
 
@@ -63,29 +63,3 @@ terms.
 
 `twitterAnalysis` was created by Andy Wang, Renzo Wijngaarden, Roan
 Raina, Yurui Feng. It is licensed under the terms of the MIT license.
-
-## Credits
-
-`twitterAnalysis` was created with
-[`cookiecutter`](https://cookiecutter.readthedocs.io/en/latest/) and the
-`py-pkgs-cookiecutter`
-[template](https://github.com/py-pkgs/py-pkgs-cookiecutter).
-
-## Example
-
-Todo:
-
-``` r
-library(twitterAnalysis)
-## basic example code
-```
-
-You’ll still need to render `README.Rmd` regularly, to keep `README.md`
-up-to-date. `devtools::build_readme()` is handy for this. You could also
-use GitHub Actions to re-render `README.Rmd` every time you push. An
-example workflow can be found here:
-<https://github.com/r-lib/actions/tree/v1/examples>.
-
-You can also embed plots, for example:
-
-<img src="man/figures/README-pressure-1.png" width="100%" />
