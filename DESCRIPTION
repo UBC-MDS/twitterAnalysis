@@ -19,4 +19,6 @@ Config/testthat/edition: 3
 Imports: 
     dplyr,
     stopwords,
-    syuzhet
+    syuzhet,
+    tm,
+    wordcloud
