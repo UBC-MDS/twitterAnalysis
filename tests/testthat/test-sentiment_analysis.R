@@ -18,27 +18,32 @@ df <- data.frame(
   )
 )
 
+# check dimensions of df
 test_that("shape of the dataframe is correct", {
   labeled_df <- sentiment_labeler(df, "text")
   expect_equal(dim(labeled_df), c(8, 3))
 })
 
+# check if sentiment is created
 test_that("sentiment column is present in dataframe", {
   labeled_df <- sentiment_labeler(df, "text")
   expect_true("sentiment" %in% colnames(labeled_df))
 })
 
+# check if 3 labels in total
 test_that("only 3 unique sentiments are present", {
   labeled_df <- sentiment_labeler(df, "text")
   expect_equal(length(unique(labeled_df$sentiment)), 3)
 })
 
+# check return type of sentiment counter
 test_that("count_tweets() returns a list", {
   labeled_df <- sentiment_labeler(df, "text")
   count_dict <- count_tweets(labeled_df)
   expect_true(is.list(count_dict))
 })
 
+# check if the calculation is right
 test_that("count_tweets() returns correct proportions", {
   labeled_df <- sentiment_labeler(df, "text")
   count_dict <- count_tweets(labeled_df)
