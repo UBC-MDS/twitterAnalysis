@@ -1,3 +1,5 @@
+library(twitteR)
+
 #' Title Take four input parameters and stored in a list object
 #' named "user_info" with keys "consumer_key", "consumer_secret", "access_token", and "access_token_secret".
 #'
