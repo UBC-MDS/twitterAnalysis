@@ -19,13 +19,16 @@ potus_df_exp <- data.frame(User =c('POTUS', 'POTUS', 'POTUS', 'POTUS', 'POTUS', 
 )
 
 test_that("Length of Corpus", {
+  # test Corpus length from tweets
   expect_equal(length(clean_tweets(potus_df_exp)), 8)
 })
 
 test_that("Length of Corpus", {
+  # test Corpus length from tweets
   expect_equal(dim(count_words(clean_tweets(potus_df_exp))), as.integer(c(90,2)))
 })
 
 test_that("Most used word", {
+  # test most used word in a tweets
   expect_equal(count_words(clean_tweets(potus_df_exp))[1,1], "king")
 })
