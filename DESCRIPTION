@@ -21,5 +21,6 @@ Imports:
     stopwords,
     tm,
     wordcloud,
-    twitteR
+    twitteR,
+    syuzhet
 
