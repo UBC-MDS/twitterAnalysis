@@ -9,6 +9,8 @@ load_twitter_by_user(keyword, limit, user_info)
 \arguments{
 \item{limit}{An integer shows how many tweets user want to return}
 
+\item{user_info}{A list contains all user credentials}
+
 \item{key}{A str contains tweets keyword}
 }
 \value{
@@ -19,6 +21,6 @@ Load dataframe which contains specific user and return as a dataframe with total
 }
 \examples{
 \dontrun{
-x <- load_twitter_by_keywords('2022', 100)
+x <- load_twitter_by_keywords('2022', 100, user_info)
 }
 }
