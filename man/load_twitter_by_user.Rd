@@ -4,21 +4,23 @@
 \alias{load_twitter_by_user}
 \title{Load dataframe which contains specific user and return as a dataframe with total tweets}
 \usage{
-load_twitter_by_user(keyword, limit, user_info)
+load_twitter_by_user(user_name, limit, user_info)
 }
 \arguments{
+\item{user_name}{A str contains tweets with specific user}
+
 \item{limit}{An integer shows how many tweets user want to return}
 
-\item{key}{A str contains tweets keyword}
+\item{user_info}{A list contains user info}
 }
 \value{
-A dataframe contains all tweets contains key words you passed
+A dataframe contains all tweets contains specific user tweets
 }
 \description{
 Load dataframe which contains specific user and return as a dataframe with total tweets
 }
 \examples{
 \dontrun{
-x <- load_twitter_by_keywords('2022', 100)
+x <- load_twitter_by_user('Cristiano', 100, user1)
 }
 }
