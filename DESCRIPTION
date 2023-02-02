@@ -23,4 +23,5 @@ Imports:
     wordcloud,
     twitteR,
     syuzhet
-
+URL: https://github.com/UBC-MDS/twitterAnalysis
+BugReports: https://github.com/UBC-MDS/twitterAnalysis/issues
