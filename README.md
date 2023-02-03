@@ -5,7 +5,7 @@
 
 <!-- badges: start -->
 
-[![R-CMD-check](https://github.com/UBC-MDS/twitterAnalysis/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/UBC-MDS/twitterAnalysis/actions/workflows/R-CMD-check.yaml)
+[![R-CMD-check](https://github.com/UBC-MDS/twitterAnalysis/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/UBC-MDS/twitterAnalysis/actions/workflows/R-CMD-check.yaml)[![test-coverage](https://github.com/UBC-MDS/twitterAnalysis/actions/workflows/test-coverage.yaml/badge.svg)](https://github.com/UBC-MDS/twitterAnalysis/actions/workflows/test-coverage.yaml)
 <!-- badges: end -->
 
 The goal of twitterAnalysis is to assess a twitter user’s character
@@ -59,7 +59,7 @@ twitter user is worth engaging with.
 ## Contributing
 
 Interested in contributing? Check out the contributing guidelines in
-CONTRIBUTING.md. Please note that this project is released with a Code
+[CONTRIBUTING.md](.github/CONTRIBUTING.md). Please note that this project is released with a Code
 of Conduct. By contributing to this project, you agree to abide by its
 terms.
 
