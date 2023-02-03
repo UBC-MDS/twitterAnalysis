@@ -31,6 +31,13 @@ access_token <- 'xxx'
 token_secret <- 'xxx'
 ```
 
+```{r include=FALSE}
+consumer_key <- Sys.getenv("CONSUMER_KEY")
+consumer_secret <- Sys.getenv("CONSUMER_SECRET")
+access_token <- Sys.getenv("ACCESS_TOKEN")
+token_secret <- Sys.getenv("TOKEN_SECRET")
+```
+
 ## Quick use example
 
 The functions of the package are all meant to be used in tandem with each other.
