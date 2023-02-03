@@ -14,6 +14,63 @@ knitr::opts_chunk$set(
 )
 ```
 
+## Load `twitterAnalsis` package
+
 ```{r setup}
 library(twitterAnalysis)
+```
+
+## Obtain Twitter API credentials
+
+From <https://developer.twitter.com/> obtain API access credentials.
+
+```{r}
+consumer_key <- 'xxx'
+consumer_secret <- 'xxx'
+access_token <- 'xxx'
+token_secret <- 'xxx'
+```
+
+## Quick use example
+
+The functions of the package are all meant to be used in tandem with each other.
+
+Step 1: Setup Twitter API credentials
+
+```{r example}
+api_user <- user_info(consumer_key, consumer_secret, access_token, token_secret)
+```
+
+Step 2: get 30 most recent tweets of a user (for example, `@elonmusk`)
+
+```{r}2}
+elon_df <- load_twitter_by_user('elonmusk', 30, api_user)
+head(elon_df)
+```
+
+Step 3: Preform pre-processing
+
+```{r}
+elon_clean_df <- generalPreprocessing(elon_df)
+head(elon_clean_df)
+```
+
+Step 4: Preform Sentiment Analysis
+
+```{r}
+elon_sentiment_df <- sentiment_labeler(elon_clean_df, 'text')
+head(elon_sentiment_df)
+```
+
+Step 5: Generate a WordCloud
+
+```{r}
+plt <- generate_word_cloud(elon_sentiment_df)
+plt
+```
+
+Optional: We can also determine the proportion of `neutral`, `positive`, and `netaive` tweets with `count_tweets()`.
+
+```{r}
+count_tweets(elon_sentiment_df)
 ```
