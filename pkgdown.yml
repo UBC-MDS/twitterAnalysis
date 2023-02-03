@@ -1,0 +1,10 @@
+pandoc: 2.19.2
+pkgdown: 2.0.7
+pkgdown_sha: ~
+articles:
+  twitterAnalysis: twitterAnalysis.html
+last_built: 2023-02-03T07:01Z
+urls:
+  reference: https://ubc-mds.github.io/twitterAnalysis/reference
+  article: https://ubc-mds.github.io/twitterAnalysis/articles
+
