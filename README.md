@@ -4,18 +4,12 @@
 # twitterAnalysis
 
 <!-- badges: start -->
+
+[![R-CMD-check](https://github.com/UBC-MDS/twitterAnalysis/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/UBC-MDS/twitterAnalysis/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
 The goal of twitterAnalysis is to assess a twitter user’s character
 based on their recent tweets
-
-## Installation
-
-You can install the development version of twitterAnalysis like so:
-
-``` r
-# Todo
-```
 
 ## Summary
 
@@ -27,6 +21,16 @@ The package twitterAnalysis is intended to provide insight into a
 twitter user based on their tweet history in effort to determine if an
 account is worth engaging with. The package provides an easy to use
 interface for determining the general sentiment expressed by a user.
+
+## Installation
+
+You can install the development version of twitterAnalysis from
+[GitHub](https://github.com/) with:
+
+``` r
+# install.packages("devtools")
+devtools::install_github("UBC-MDS/twitterAnalysis")
+```
 
 ## Functions
 
