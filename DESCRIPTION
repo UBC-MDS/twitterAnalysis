@@ -26,6 +26,7 @@ Depends:
     wordcloud,
     twitteR,
     syuzhet
-URL: https://github.com/UBC-MDS/twitterAnalysis
+URL: https://github.com/UBC-MDS/twitterAnalysis,
+    https://ubc-mds.github.io/twitterAnalysis/
 BugReports: https://github.com/UBC-MDS/twitterAnalysis/issues
 VignetteBuilder: knitr
