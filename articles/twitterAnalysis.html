@@ -132,44 +132,37 @@ each other.</p>
 <span><span class="co">#&gt; [1] "Using direct authentication"</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">elon_df</span><span class="op">)</span></span>
 <span><span class="co">#&gt;   screenName                  id             created favoriteCount retweetCount</span></span>
-<span><span class="co">#&gt; 1   elonmusk 1621719831249567744 2023-02-04 03:58:32          3488          164</span></span>
-<span><span class="co">#&gt; 2   elonmusk 1621719712429129728 2023-02-04 03:58:04         10306          305</span></span>
-<span><span class="co">#&gt; 3   elonmusk 1621689064293339136 2023-02-04 01:56:17         14620          537</span></span>
-<span><span class="co">#&gt; 4   elonmusk 1621655873641930752 2023-02-03 23:44:23          1705           97</span></span>
-<span><span class="co">#&gt; 5   elonmusk 1621654211908997121 2023-02-03 23:37:47         23604         1239</span></span>
-<span><span class="co">#&gt; 6   elonmusk 1621653950947799042 2023-02-03 23:36:45        151542        11455</span></span>
-<span><span class="co">#&gt;                                                                                                                                             text</span></span>
-<span><span class="co">#&gt; 1                                                                                                                                        @tobi !</span></span>
-<span><span class="co">#&gt; 2                                                                                                                                 @TrungTPhan 🤣</span></span>
-<span><span class="co">#&gt; 3                                                                                                                              @TheBabylonBee 🤣</span></span>
-<span><span class="co">#&gt; 4                                                                                                                   @ErikaAwakening You’re right</span></span>
-<span><span class="co">#&gt; 5                                                                                                             @Tesla Manufactured in California!</span></span>
-<span><span class="co">#&gt; 6 Thank goodness, the wisdom of the people has prevailed!\n\nI am deeply appreciative of the jury’s unanimous finding o… https://t.co/fegi6b41Md</span></span></code></pre></div>
+<span><span class="co">#&gt; 1   elonmusk 1621886041245237253 2023-02-04 14:59:00          1334           58</span></span>
+<span><span class="co">#&gt; 2   elonmusk 1621881994375299073 2023-02-04 14:42:55          2398          112</span></span>
+<span><span class="co">#&gt; 3   elonmusk 1621881617978429440 2023-02-04 14:41:25          1264           78</span></span>
+<span><span class="co">#&gt; 4   elonmusk 1621793704175362050 2023-02-04 08:52:05         13623          423</span></span>
+<span><span class="co">#&gt; 5   elonmusk 1621719831249567744 2023-02-04 03:58:32          6589          297</span></span>
+<span><span class="co">#&gt; 6   elonmusk 1621719712429129728 2023-02-04 03:58:04         22970          653</span></span>
+<span><span class="co">#&gt;                                    text</span></span>
+<span><span class="co">#&gt; 1                           @cb_doge 🤣</span></span>
+<span><span class="co">#&gt; 2                    @d4t4wr4ngl3r 🤣🤣</span></span>
+<span><span class="co">#&gt; 3 @BillyM2k @cb_doge 🤣 it’s a fair cop</span></span>
+<span><span class="co">#&gt; 4                      @TheJackForge 🤣</span></span>
+<span><span class="co">#&gt; 5                               @tobi !</span></span>
+<span><span class="co">#&gt; 6                        @TrungTPhan 🤣</span></span></code></pre></div>
 <p>Step 3: Preform pre-processing</p>
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">elon_clean_df</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/generalPreprocessing.html">generalPreprocessing</a></span><span class="op">(</span><span class="va">elon_df</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">elon_clean_df</span><span class="op">)</span></span>
 <span><span class="co">#&gt;   screenName                  id             created favoriteCount retweetCount</span></span>
-<span><span class="co">#&gt; 1   elonmusk 1621719831249567744 2023-02-04 03:58:32          3488          164</span></span>
-<span><span class="co">#&gt; 2   elonmusk 1621719712429129728 2023-02-04 03:58:04         10306          305</span></span>
-<span><span class="co">#&gt; 3   elonmusk 1621689064293339136 2023-02-04 01:56:17         14620          537</span></span>
-<span><span class="co">#&gt; 4   elonmusk 1621655873641930752 2023-02-03 23:44:23          1705           97</span></span>
-<span><span class="co">#&gt; 5   elonmusk 1621654211908997121 2023-02-03 23:37:47         23604         1239</span></span>
-<span><span class="co">#&gt; 6   elonmusk 1621653950947799042 2023-02-03 23:36:45        151542        11455</span></span>
-<span><span class="co">#&gt;                                                                                                                                             text</span></span>
-<span><span class="co">#&gt; 1                                                                                                                                        @tobi !</span></span>
-<span><span class="co">#&gt; 2                                                                                                                                 @TrungTPhan 🤣</span></span>
-<span><span class="co">#&gt; 3                                                                                                                              @TheBabylonBee 🤣</span></span>
-<span><span class="co">#&gt; 4                                                                                                                   @ErikaAwakening You’re right</span></span>
-<span><span class="co">#&gt; 5                                                                                                             @Tesla Manufactured in California!</span></span>
-<span><span class="co">#&gt; 6 Thank goodness, the wisdom of the people has prevailed!\n\nI am deeply appreciative of the jury’s unanimous finding o… https://t.co/fegi6b41Md</span></span>
-<span><span class="co">#&gt;                                                                                                                text_clean</span></span>
-<span><span class="co">#&gt; 1                                                                                                                       !</span></span>
-<span><span class="co">#&gt; 2                                                                                                                      🤣</span></span>
-<span><span class="co">#&gt; 3                                                                                                                      🤣</span></span>
-<span><span class="co">#&gt; 4                                                                                                            You’re right</span></span>
-<span><span class="co">#&gt; 5                                                                                             Manufactured in California!</span></span>
-<span><span class="co">#&gt; 6 Thank goodness, the wisdom of the people has prevailed!\n\nI am deeply appreciative of the jury’s unanimous finding o…</span></span></code></pre></div>
+<span><span class="co">#&gt; 1   elonmusk 1621886041245237253 2023-02-04 14:59:00          1334           58</span></span>
+<span><span class="co">#&gt; 2   elonmusk 1621881994375299073 2023-02-04 14:42:55          2398          112</span></span>
+<span><span class="co">#&gt; 3   elonmusk 1621881617978429440 2023-02-04 14:41:25          1264           78</span></span>
+<span><span class="co">#&gt; 4   elonmusk 1621793704175362050 2023-02-04 08:52:05         13623          423</span></span>
+<span><span class="co">#&gt; 5   elonmusk 1621719831249567744 2023-02-04 03:58:32          6589          297</span></span>
+<span><span class="co">#&gt; 6   elonmusk 1621719712429129728 2023-02-04 03:58:04         22970          653</span></span>
+<span><span class="co">#&gt;                                    text           text_clean</span></span>
+<span><span class="co">#&gt; 1                           @cb_doge 🤣                   🤣</span></span>
+<span><span class="co">#&gt; 2                    @d4t4wr4ngl3r 🤣🤣                 🤣🤣</span></span>
+<span><span class="co">#&gt; 3 @BillyM2k @cb_doge 🤣 it’s a fair cop   🤣 it’s a fair cop</span></span>
+<span><span class="co">#&gt; 4                      @TheJackForge 🤣                   🤣</span></span>
+<span><span class="co">#&gt; 5                               @tobi !                    !</span></span>
+<span><span class="co">#&gt; 6                        @TrungTPhan 🤣                   🤣</span></span></code></pre></div>
 <p>Step 4: Preform Sentiment Analysis</p>
 <div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">elon_sentiment_df</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/sentiment_labeler.html">sentiment_labeler</a></span><span class="op">(</span><span class="va">elon_clean_df</span>, <span class="st">'text'</span><span class="op">)</span></span>
@@ -179,33 +172,19 @@ each other.</p>
 <span><span class="co">#&gt;   Please report the issue to the authors.</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">elon_sentiment_df</span><span class="op">)</span></span>
 <span><span class="co">#&gt;   screenName                  id             created favoriteCount retweetCount</span></span>
-<span><span class="co">#&gt; 1   elonmusk 1621719831249567744 2023-02-04 03:58:32          3488          164</span></span>
-<span><span class="co">#&gt; 2   elonmusk 1621719712429129728 2023-02-04 03:58:04         10306          305</span></span>
-<span><span class="co">#&gt; 3   elonmusk 1621689064293339136 2023-02-04 01:56:17         14620          537</span></span>
-<span><span class="co">#&gt; 4   elonmusk 1621655873641930752 2023-02-03 23:44:23          1705           97</span></span>
-<span><span class="co">#&gt; 5   elonmusk 1621654211908997121 2023-02-03 23:37:47         23604         1239</span></span>
-<span><span class="co">#&gt; 6   elonmusk 1621653950947799042 2023-02-03 23:36:45        151542        11455</span></span>
-<span><span class="co">#&gt;                                                                                                                                             text</span></span>
-<span><span class="co">#&gt; 1                                                                                                                                        @tobi !</span></span>
-<span><span class="co">#&gt; 2                                                                                                                                 @TrungTPhan 🤣</span></span>
-<span><span class="co">#&gt; 3                                                                                                                              @TheBabylonBee 🤣</span></span>
-<span><span class="co">#&gt; 4                                                                                                                   @ErikaAwakening You’re right</span></span>
-<span><span class="co">#&gt; 5                                                                                                             @Tesla Manufactured in California!</span></span>
-<span><span class="co">#&gt; 6 Thank goodness, the wisdom of the people has prevailed!\n\nI am deeply appreciative of the jury’s unanimous finding o… https://t.co/fegi6b41Md</span></span>
-<span><span class="co">#&gt;                                                                                                                text_clean</span></span>
-<span><span class="co">#&gt; 1                                                                                                                       !</span></span>
-<span><span class="co">#&gt; 2                                                                                                                      🤣</span></span>
-<span><span class="co">#&gt; 3                                                                                                                      🤣</span></span>
-<span><span class="co">#&gt; 4                                                                                                            You’re right</span></span>
-<span><span class="co">#&gt; 5                                                                                             Manufactured in California!</span></span>
-<span><span class="co">#&gt; 6 Thank goodness, the wisdom of the people has prevailed!\n\nI am deeply appreciative of the jury’s unanimous finding o… </span></span>
-<span><span class="co">#&gt;   sentiment</span></span>
-<span><span class="co">#&gt; 1   neutral</span></span>
-<span><span class="co">#&gt; 2   neutral</span></span>
-<span><span class="co">#&gt; 3   neutral</span></span>
-<span><span class="co">#&gt; 4   neutral</span></span>
-<span><span class="co">#&gt; 5   neutral</span></span>
-<span><span class="co">#&gt; 6  positive</span></span></code></pre></div>
+<span><span class="co">#&gt; 1   elonmusk 1621886041245237253 2023-02-04 14:59:00          1334           58</span></span>
+<span><span class="co">#&gt; 2   elonmusk 1621881994375299073 2023-02-04 14:42:55          2398          112</span></span>
+<span><span class="co">#&gt; 3   elonmusk 1621881617978429440 2023-02-04 14:41:25          1264           78</span></span>
+<span><span class="co">#&gt; 4   elonmusk 1621793704175362050 2023-02-04 08:52:05         13623          423</span></span>
+<span><span class="co">#&gt; 5   elonmusk 1621719831249567744 2023-02-04 03:58:32          6589          297</span></span>
+<span><span class="co">#&gt; 6   elonmusk 1621719712429129728 2023-02-04 03:58:04         22970          653</span></span>
+<span><span class="co">#&gt;                                    text           text_clean sentiment</span></span>
+<span><span class="co">#&gt; 1                           @cb_doge 🤣                   🤣   neutral</span></span>
+<span><span class="co">#&gt; 2                    @d4t4wr4ngl3r 🤣🤣                 🤣🤣   neutral</span></span>
+<span><span class="co">#&gt; 3 @BillyM2k @cb_doge 🤣 it’s a fair cop   🤣 it’s a fair cop  positive</span></span>
+<span><span class="co">#&gt; 4                      @TheJackForge 🤣                   🤣   neutral</span></span>
+<span><span class="co">#&gt; 5                               @tobi !                    !   neutral</span></span>
+<span><span class="co">#&gt; 6                        @TrungTPhan 🤣                   🤣   neutral</span></span></code></pre></div>
 <p>Step 5: Generate a WordCloud</p>
 <div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">elon_plt_clean_df</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/clean_tweets.html">clean_tweets</a></span><span class="op">(</span><span class="va">elon_sentiment_df</span><span class="op">)</span></span>
@@ -221,10 +200,10 @@ tweets with <code><a href="../reference/count_tweets.html">count_tweets()</a></c
 <span><span class="co">#&gt; [1] 0.1041667</span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt; $neutral</span></span>
-<span><span class="co">#&gt; [1] 0.65625</span></span>
+<span><span class="co">#&gt; [1] 0.6458333</span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt; $positive</span></span>
-<span><span class="co">#&gt; [1] 0.2395833</span></span></code></pre></div>
+<span><span class="co">#&gt; [1] 0.25</span></span></code></pre></div>
 </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>
     </nav></aside>
