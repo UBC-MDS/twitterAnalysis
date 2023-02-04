@@ -1,3 +1,4 @@
+# Define supporting variables
 
 potus_df <- data.frame(
   User = c("POTUS", "POTUS", "POTUS", "POTUS", "POTUS", "POTUS", "POTUS", "POTUS"),
@@ -13,8 +14,9 @@ potus_df <- data.frame(
   )
 )
 
+# Tests
 
-test_that("removes rows with FAV and RT", {
+test_that("Removes rows with FAV and RT.", {
   df <- data.frame(
     User = c("POTUS", "POTUS", "POTUS"),
     text = c("RT tweet gets removed", "FAV tweet gets removed", "tweet passes")
@@ -30,8 +32,8 @@ test_that("removes rows with FAV and RT", {
 })
 
 
-# check if the text are successfully cleaned
-test_that("remove URLs, mentions, numbers", {
+
+test_that("Remove URLs, mentions, numbers.", {
   df <- data.frame(
     User = c("POTUS", "POTUS", "POTUS", "POTUS"),
     text = c(
@@ -56,22 +58,20 @@ test_that("remove URLs, mentions, numbers", {
       "tweet   , url, number"
     )
   )
-
   expect_identical(generalPreprocessing(df), df_exp)
 })
 
-# output dimension check
-test_that("shape", {
+
+test_that("Dimension of output", {
   expect_equal(dim(generalPreprocessing(potus_df)), as.integer(c(8, 3)))
 })
 
-# check if new clean text column created
-test_that("if column present", {
+
+test_that("Existance of text_clean column in output", {
   expect_true("text_clean" %in% colnames(generalPreprocessing(potus_df)))
 })
 
-# check if text cleaned corrected
-test_that("potus_df", {
+test_that("Preprocessing of @POTUS tweets", {
   potus_df_exp <- data.frame(
     User = c("POTUS", "POTUS", "POTUS", "POTUS", "POTUS", "POTUS", "POTUS", "POTUS"),
     text = c(
