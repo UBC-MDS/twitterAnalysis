@@ -19,6 +19,8 @@ knitr::opts_chunk$set(
 [![R-CMD-check](https://github.com/UBC-MDS/twitterAnalysis/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/UBC-MDS/twitterAnalysis/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
+[![codecov](https://codecov.io/gh/UBC-MDS/twitterAnalysis/branch/main/graph/badge.svg?token=DFKT41R1q0)](https://codecov.io/gh/UBC-MDS/twitterAnalysis)
+
 The goal of twitterAnalysis is to assess a twitter user’s character based on their recent tweets
 
 ## Summary
