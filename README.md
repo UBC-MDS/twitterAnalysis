@@ -5,7 +5,7 @@
 
 <!-- badges: start -->
 
-[![R-CMD-check](https://github.com/UBC-MDS/twitterAnalysis/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/UBC-MDS/twitterAnalysis/actions/workflows/R-CMD-check.yaml)[![test-coverage](https://github.com/UBC-MDS/twitterAnalysis/actions/workflows/test-coverage.yaml/badge.svg)](https://github.com/UBC-MDS/twitterAnalysis/actions/workflows/test-coverage.yaml)
+[![R-CMD-check](https://github.com/UBC-MDS/twitterAnalysis/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/UBC-MDS/twitterAnalysis/actions/workflows/R-CMD-check.yaml)[![test-coverage](https://github.com/UBC-MDS/twitterAnalysis/actions/workflows/test-coverage.yaml/badge.svg)](https://github.com/UBC-MDS/twitterAnalysis/actions/workflows/test-coverage.yaml)[![codecov](https://codecov.io/gh/UBC-MDS/twitterAnalysis/branch/main/graph/badge.svg?token=DFKT41R1q0)](https://codecov.io/gh/UBC-MDS/twitterAnalysis)
 <!-- badges: end -->
 
 The goal of twitterAnalysis is to assess a twitter user’s character
