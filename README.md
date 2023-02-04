@@ -3,11 +3,9 @@
 
 # twitterAnalysis
 
-<!-- badges: start -->
 
 [![R-CMD-check](https://github.com/UBC-MDS/twitterAnalysis/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/UBC-MDS/twitterAnalysis/actions/workflows/R-CMD-check.yaml)
-<!-- badges: end -->
-
+[![test-coverage](https://github.com/UBC-MDS/twitterAnalysis/actions/workflows/test-coverage.yaml/badge.svg)](https://github.com/UBC-MDS/twitterAnalysis/actions/workflows/test-coverage.yaml)
 [![codecov](https://codecov.io/gh/UBC-MDS/twitterAnalysis/branch/main/graph/badge.svg?token=DFKT41R1q0)](https://codecov.io/gh/UBC-MDS/twitterAnalysis)
 
 The goal of twitterAnalysis is to assess a twitter user’s character
@@ -66,19 +64,19 @@ cleaned_tweets |>
 
 ## Functions
 
-**load_twitter** : Returns a user’s recent tweets (as a dataframe) given
+**`load_twitter`** : Returns a user’s recent tweets (as a dataframe) given
 their `user id` using the Twitter API.
 
-**generalPreprocessing** : Cleans the recent tweet dataframe generated
+**`generalPreprocessing`** : Cleans the recent tweet dataframe generated
 by `load_twitter`. Includes features such as removing punctuation and
 extracting emojis.
 
-**sentiment_labeler** : Determines the general (average) sentiment of
+**`sentiment_labeler`** : Determines the general (average) sentiment of
 recent tweets.
 
-**count_tweets:** Return the proportion of three sentiments.
+**`count_tweets`**: Return the proportion of three sentiments.
 
-**create_wordcloud** : Generates a word cloud of most frequently used
+**`create_wordcloud`** : Generates a word cloud of most frequently used
 words in tweets.
 
 ## Scope and Fit
