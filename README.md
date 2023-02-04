@@ -32,6 +32,15 @@ You can install the development version of twitterAnalysis from
 devtools::install_github("UBC-MDS/twitterAnalysis")
 ```
 
+To get twitter developer account, please find follow instructions and apply one at https://developer.twitter.com/en
+
+1. Log-in to Twitter and verify your email address. (Note that the email and phone number verification from your Twitter account may be needed to apply for a developer account, review on the Twitter help center: email address confirmation or add phone number.)
+2. Click sign up at developer.twitter.com to enter your developer account name, location and use case details
+3. Review and accept the developer agreement and submit
+4. Check your email to verify your developer account. Look for an email from developer-accounts@twitter.com that has the subject line: "Verify your Twitter Developer Account" Note: the developer-accounts@twitter.com email is not available for inbound requests.
+5. You should now have access to the Developer Portal to create a new App and Project with Essential access, or will need to continue your application with Elevated access
+If you apply for Elevated access (or Academic Research access) please continue to check your verified email for information about your application.
+
 ## Example
 
 Here is an example analysis using 300 recent tweets from a user.
