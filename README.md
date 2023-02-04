@@ -5,8 +5,10 @@
 
 <!-- badges: start -->
 
-[![R-CMD-check](https://github.com/UBC-MDS/twitterAnalysis/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/UBC-MDS/twitterAnalysis/actions/workflows/R-CMD-check.yaml)[![test-coverage](https://github.com/UBC-MDS/twitterAnalysis/actions/workflows/test-coverage.yaml/badge.svg)](https://github.com/UBC-MDS/twitterAnalysis/actions/workflows/test-coverage.yaml)[![codecov](https://codecov.io/gh/UBC-MDS/twitterAnalysis/branch/main/graph/badge.svg?token=DFKT41R1q0)](https://codecov.io/gh/UBC-MDS/twitterAnalysis)
+[![R-CMD-check](https://github.com/UBC-MDS/twitterAnalysis/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/UBC-MDS/twitterAnalysis/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
+
+[![codecov](https://codecov.io/gh/UBC-MDS/twitterAnalysis/branch/main/graph/badge.svg?token=DFKT41R1q0)](https://codecov.io/gh/UBC-MDS/twitterAnalysis)
 
 The goal of twitterAnalysis is to assess a twitter user’s character
 based on their recent tweets
@@ -32,6 +34,36 @@ You can install the development version of twitterAnalysis from
 devtools::install_github("UBC-MDS/twitterAnalysis")
 ```
 
+## Example
+
+Here is an example analysis using 300 recent tweets from a user
+
+``` r
+library(twitterAnalysis)
+
+#retrieve 300 tweets from @elonmusk
+tokens <- user_info("YOUR_consumer_key", 
+                    "YOUR_consumer_secret", 
+                    "YOUR_access_token", 
+                    "YOUR_access_token_secret")
+elon_tweets <- load_twitter_by_user("elonmusk", 300, tokens)
+
+#clean up tweets
+cleaned_tweets <- generalPreprocessing(elon_tweets)
+
+#label sentiment
+labeled_tweets <- sentiment_labeler(cleaned_tweets, "text_clean")
+
+#count frequency of each sentiment
+sentiment_freq <- count_tweets(labeled_tweets)
+
+#generate wordcloud
+cleaned_tweets |> 
+  clean_tweets() |> 
+  count_words() |> 
+  create_wordcloud()
+```
+
 ## Functions
 
 **load_twitter** : Returns a user’s recent tweets (as a dataframe) given
@@ -41,8 +73,10 @@ their `user id` using the Twitter API.
 by `load_twitter`. Includes features such as removing punctuation and
 extracting emojis.
 
-**get_sentiment_result** : Determines the general (average) sentiment of
+**sentiment_labeler** : Determines the general (average) sentiment of
 recent tweets.
+
+**count_tweets:** Return the proportion of three sentiments.
 
 **create_wordcloud** : Generates a word cloud of most frequently used
 words in tweets.
@@ -59,7 +93,7 @@ twitter user is worth engaging with.
 ## Contributing
 
 Interested in contributing? Check out the contributing guidelines in
-[CONTRIBUTING.md](.github/CONTRIBUTING.md). Please note that this project is released with a Code
+CONTRIBUTING.md. Please note that this project is released with a Code
 of Conduct. By contributing to this project, you agree to abide by its
 terms.
 
