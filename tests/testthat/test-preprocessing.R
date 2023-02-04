@@ -58,7 +58,6 @@ test_that("Remove URLs, mentions, numbers.", {
       "tweet   , url, number"
     )
   )
-
   expect_identical(generalPreprocessing(df), df_exp)
 })
 

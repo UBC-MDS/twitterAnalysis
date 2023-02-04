@@ -4,18 +4,12 @@
 # twitterAnalysis
 
 <!-- badges: start -->
+
+[![R-CMD-check](https://github.com/UBC-MDS/twitterAnalysis/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/UBC-MDS/twitterAnalysis/actions/workflows/R-CMD-check.yaml)[![test-coverage](https://github.com/UBC-MDS/twitterAnalysis/actions/workflows/test-coverage.yaml/badge.svg)](https://github.com/UBC-MDS/twitterAnalysis/actions/workflows/test-coverage.yaml)
 <!-- badges: end -->
 
 The goal of twitterAnalysis is to assess a twitter user’s character
-based on their recent tweets.
-
-## Installation
-
-You can install the development version of twitterAnalysis like so:
-
-``` r
-# Todo
-```
+based on their recent tweets
 
 ## Summary
 
@@ -27,6 +21,16 @@ The package twitterAnalysis is intended to provide insight into a
 twitter user based on their tweet history in effort to determine if an
 account is worth engaging with. The package provides an easy to use
 interface for determining the general sentiment expressed by a user.
+
+## Installation
+
+You can install the development version of twitterAnalysis from
+[GitHub](https://github.com/) with:
+
+``` r
+# install.packages("devtools")
+devtools::install_github("UBC-MDS/twitterAnalysis")
+```
 
 ## Functions
 
@@ -45,17 +49,17 @@ words in tweets.
 
 ## Scope and Fit
 
-There are existing packages that preform tweet analysis (including
-[twitter-sentiment-analysis](https://github.com/abdulfatir/twitter-sentiment-analysis),
-[tweetlytics](https://github.com/UBC-MDS/tweetlytics), and
-[pytweet](https://github.com/UBC-MDS/pytweet)). However, none of these
+There are existing R packages that preform tweet analysis and
+preprocessing (including
+[textprepr](https://github.com/UBC-MDS/textprepr) and
+[tweetr](https://github.com/UBC-MDS/tweetr)). However, none of these
 packages focus of providing metrics in the context of determining if the
 twitter user is worth engaging with.
 
 ## Contributing
 
 Interested in contributing? Check out the contributing guidelines in
-CONTRIBUTING.md. Please note that this project is released with a Code
+[CONTRIBUTING.md](.github/CONTRIBUTING.md). Please note that this project is released with a Code
 of Conduct. By contributing to this project, you agree to abide by its
 terms.
 
@@ -63,29 +67,3 @@ terms.
 
 `twitterAnalysis` was created by Andy Wang, Renzo Wijngaarden, Roan
 Raina, Yurui Feng. It is licensed under the terms of the MIT license.
-
-## Credits
-
-`twitterAnalysis` was created with
-[`cookiecutter`](https://cookiecutter.readthedocs.io/en/latest/) and the
-`py-pkgs-cookiecutter`
-[template](https://github.com/py-pkgs/py-pkgs-cookiecutter).
-
-## Example
-
-Todo:
-
-``` r
-library(twitterAnalysis)
-## basic example code
-```
-
-You’ll still need to render `README.Rmd` regularly, to keep `README.md`
-up-to-date. `devtools::build_readme()` is handy for this. You could also
-use GitHub Actions to re-render `README.Rmd` every time you push. An
-example workflow can be found here:
-<https://github.com/r-lib/actions/tree/v1/examples>.
-
-You can also embed plots, for example:
-
-<img src="man/figures/README-pressure-1.png" width="100%" />

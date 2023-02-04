@@ -26,6 +26,7 @@ potus_df_exp <- data.frame(
 # Tests
 
 test_that("Length of Corpus", {
+  # test Corpus length from tweets
   expect_equal(length(clean_tweets(potus_df_exp)), 8)
 })
 

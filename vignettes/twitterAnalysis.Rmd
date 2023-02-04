@@ -1,0 +1,84 @@
+---
+title: "twitterAnalysis"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{twitterAnalysis}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+## Load `twitterAnalsis` package
+
+```{r setup}
+library(twitterAnalysis)
+```
+
+## Obtain Twitter API credentials
+
+From <https://developer.twitter.com/> obtain API access credentials.
+
+```{r}
+consumer_key <- 'xxx'
+consumer_secret <- 'xxx'
+access_token <- 'xxx'
+token_secret <- 'xxx'
+```
+
+```{r include=FALSE}
+consumer_key <- Sys.getenv("CONSUMER_KEY")
+consumer_secret <- Sys.getenv("CONSUMER_SECRET")
+access_token <- Sys.getenv("ACCESS_TOKEN")
+token_secret <- Sys.getenv("TOKEN_SECRET")
+```
+
+## Quick use example
+
+The functions of the package are all meant to be used in tandem with each other.
+
+Step 1: Setup Twitter API credentials
+
+```{r example}
+api_user <- user_info(consumer_key, consumer_secret, access_token, token_secret)
+```
+
+Step 2: get 30 most recent tweets of a user (for example, `@elonmusk`)
+
+```{r}
+elon_df <- load_twitter_by_user('elonmusk', 100, api_user)
+head(elon_df)
+```
+
+Step 3: Preform pre-processing
+
+```{r}
+elon_clean_df <- generalPreprocessing(elon_df)
+head(elon_clean_df)
+```
+
+Step 4: Preform Sentiment Analysis
+
+```{r}
+elon_sentiment_df <- sentiment_labeler(elon_clean_df, 'text')
+head(elon_sentiment_df)
+```
+
+Step 5: Generate a WordCloud
+
+```{r}
+elon_plt_clean_df <- clean_tweets(elon_sentiment_df)
+elon_count_df <- count_words(elon_plt_clean_df)
+plt <- create_wordcloud(elon_count_df)
+```
+
+Optional: We can also determine the proportion of `neutral`, `positive`, and `netaive` tweets with `count_tweets()`.
+
+```{r}
+count_tweets(elon_sentiment_df)
+```

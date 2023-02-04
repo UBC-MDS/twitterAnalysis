@@ -14,8 +14,6 @@ df <- data.frame(
   )
 )
 
-# Tests
-
 test_that("Dimension of output", {
   labeled_df <- sentiment_labeler(df, "text")
   expect_equal(dim(labeled_df), c(8, 3))

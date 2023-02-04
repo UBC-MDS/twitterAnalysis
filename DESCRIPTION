@@ -14,12 +14,19 @@ Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.2.3
 Suggests: 
+    covr,
+    knitr,
+    rmarkdown,
     testthat (>= 3.0.0)
 Config/testthat/edition: 3
-Imports: 
+Depends: 
     dplyr,
     stopwords,
     tm,
     wordcloud,
-    twitteR
-
+    twitteR,
+    syuzhet
+URL: https://github.com/UBC-MDS/twitterAnalysis,
+    https://ubc-mds.github.io/twitterAnalysis/
+BugReports: https://github.com/UBC-MDS/twitterAnalysis/issues
+VignetteBuilder: knitr
