@@ -34,8 +34,7 @@ devtools::install_github("UBC-MDS/twitterAnalysis")
 
 ## Example
 
-Here is an example analysis using 300 recent tweets from a user
-
+Here is an example analysis using 300 recent tweets from a user.
 ``` r
 library(twitterAnalysis)
 
@@ -61,6 +60,8 @@ cleaned_tweets |>
   count_words() |> 
   create_wordcloud()
 ```
+For a more detailed example usage, see
+[here](https://ubc-mds.github.io/twitterAnalysis/articles/twitterAnalysis.html)
 
 ## Functions
 
